@@ -1,0 +1,91 @@
+package selenium;
+
+import java.util.Scanner;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class BestBuy {
+
+	public static void main(String[] args) throws InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jordan\\Desktop\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		//User input prior to proceeding in the program
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter your first name");
+		String firstName = input.next();
+		
+		System.out.println("Enter your last name");
+		String lastName = input.next();
+		
+		System.out.println("Enter your address");
+		String address = input.next();
+		
+		System.out.println("Enter your city");
+		String city = input.next();
+		
+		System.out.println("Enter your state");
+		String state = input.next();
+		
+		System.out.println("Enter your zip");
+		String zip = input.next();
+		
+		System.out.println("Enter your Email");
+		String email = input.next();
+		
+		System.out.println("Enter your phone number");
+		String phoneNumber = input.next();
+		
+		System.out.println("Enter your credit card number");
+		String creditCard = input.next();
+		
+		System.out.println("Enter the expiration month of your credit card in numeral format");
+		String expirationMonth = input.next();
+		
+		System.out.println("Enter the expiration year of your credit card");
+		String expirationYear = input.next();
+		
+		System.out.println("Enter the security code of your credit card");
+		String securityCode	= input.next();
+		
+		//automation of bestbuy to add item to card 
+		
+		driver.get("https://BestBuy.com");
+		driver.manage().deleteAllCookies();
+		driver.manage().window().maximize();
+		driver.findElement(By.cssSelector("#widgets-view-email-modal-mount > div > div > div:nth-child(1) > div > div > div > div > button")).click();
+		Thread.sleep(1000);
+		driver.findElement(By.id("gh-search-input")).sendKeys("PS5");
+		driver.findElement(By.className("header-search-button")).click();
+		driver.findElement(By.linkText("Package - Sony - PlayStation 5 - DualSense Wireless Controller and PlayStation 5 - DualSense Charging Station - White - White")).click();
+		driver.findElement(By.className("fulfillment-combo-add-to-cart-button")).click();
+		driver.findElement(By.className("cart-icon")).click();	
+		Thread.sleep(1000);
+		driver.findElement(By.className("checkout-buttons__checkout")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("/html/body/div[1]/div/section/main/div[2]/div[4]/div/div[2]")).click();
+		Thread.sleep(2000);
+		
+		//contact information
+		driver.findElement(By.id("user.emailAddress")).sendKeys(email);
+		driver.findElement(By.id("user.phone")).sendKeys(phoneNumber);
+		driver.findElement(By.className("button--continue")).click();
+		
+		//payment information
+		
+//		driver.findElement(By.id("optimized-cc-card-number")).sendKeys(creditCard);
+//		driver.findElement(By.id("payment.billingAddress.firstName")).sendKeys(firstName);
+//		driver.findElement(By.id("payment.billingAddress.lastName")).sendKeys(lastName);
+//		driver.findElement(By.id("payment.billingAddress.street")).sendKeys(address);
+//		driver.findElement(By.id("payment.billingAddress.city")).sendKeys(city);
+//		driver.findElement(By.id("payment.billingAddress.state")).sendKeys(state);
+//		driver.findElement(By.id("payment.billingAddress.zipcode")).sendKeys(zip);
+		
+
+}
+	
+}
