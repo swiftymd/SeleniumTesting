@@ -9,8 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class BestBuy {
 
 	public static void main(String[] args) throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\jordan\\Desktop\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		DriverFactory df = new DriverFactory();
+		WebDriver driver = df.getDriver("chrome");
 		
 		//User input prior to proceeding in the program
 		
@@ -77,15 +77,16 @@ public class BestBuy {
 		
 		//payment information
 		
-//		driver.findElement(By.id("optimized-cc-card-number")).sendKeys(creditCard);
-//		driver.findElement(By.id("payment.billingAddress.firstName")).sendKeys(firstName);
-//		driver.findElement(By.id("payment.billingAddress.lastName")).sendKeys(lastName);
-//		driver.findElement(By.id("payment.billingAddress.street")).sendKeys(address);
-//		driver.findElement(By.id("payment.billingAddress.city")).sendKeys(city);
-//		driver.findElement(By.id("payment.billingAddress.state")).sendKeys(state);
-//		driver.findElement(By.id("payment.billingAddress.zipcode")).sendKeys(zip);
+		driver.findElement(By.id("optimized-cc-card-number")).sendKeys(creditCard);
+		driver.findElement(By.id("payment.billingAddress.firstName")).sendKeys(firstName);
+		driver.findElement(By.id("payment.billingAddress.lastName")).sendKeys(lastName);
+		driver.findElement(By.id("payment.billingAddress.street")).sendKeys(address);
+		driver.findElement(By.id("payment.billingAddress.city")).sendKeys(city);
+		driver.findElement(By.id("payment.billingAddress.state")).sendKeys(state);
+		driver.findElement(By.id("payment.billingAddress.zipcode")).sendKeys(zip);
 		
 
 }
 	
 }
+
