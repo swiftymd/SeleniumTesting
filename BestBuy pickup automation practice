@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class BestBuy {
 
@@ -50,15 +52,20 @@ public class BestBuy {
 		String expirationYear = input.next();
 		
 		System.out.println("Enter the security code of your credit card");
-		String securityCode	= input.next();
+		String securityCode = input.next();
 		
 		//automation of bestbuy to add item to card 
 		
 		driver.get("https://BestBuy.com");
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
+		
+		//alert
+		
 		driver.findElement(By.cssSelector("#widgets-view-email-modal-mount > div > div > div:nth-child(1) > div > div > div > div > button")).click();
 		Thread.sleep(1000);
+		
+		//search and clicking on shopping cart along with guest checkout
 		driver.findElement(By.id("gh-search-input")).sendKeys("PS5");
 		driver.findElement(By.className("header-search-button")).click();
 		driver.findElement(By.linkText("Package - Sony - PlayStation 5 - DualSense Wireless Controller and PlayStation 5 - DualSense Charging Station - White - White")).click();
@@ -78,13 +85,35 @@ public class BestBuy {
 		//payment information
 		
 		driver.findElement(By.id("optimized-cc-card-number")).sendKeys(creditCard);
+		Thread.sleep(2000);
+		
+		WebElement expiration = driver.findElement(By.xpath("//*[@id='credit-card-expiration-month']/div/div/select"));
+		Select sel = new Select(expiration);
+		sel.selectByVisibleText(expirationMonth);
+		
+		WebElement year = driver.findElement(By.xpath("//*[@id='credit-card-expiration-year\']/div/div/select"));
+		Select sel1 = new Select(year);
+		sel1.selectByVisibleText(expirationYear);
+		
+		driver.findElement(By.id("credit-card-cvv")).sendKeys(securityCode);
+		
+		
 		driver.findElement(By.id("payment.billingAddress.firstName")).sendKeys(firstName);
 		driver.findElement(By.id("payment.billingAddress.lastName")).sendKeys(lastName);
 		driver.findElement(By.id("payment.billingAddress.street")).sendKeys(address);
 		driver.findElement(By.id("payment.billingAddress.city")).sendKeys(city);
 		driver.findElement(By.id("payment.billingAddress.state")).sendKeys(state);
+		
+		WebElement state1 = driver.findElement(By.xpath("//*[@id='payment.billingAddress.state']"));
+		Select sel2 = new Select(state1);
+		sel2.selectByVisibleText(state);
+		
 		driver.findElement(By.id("payment.billingAddress.zipcode")).sendKeys(zip);
 		
+		driver.findElement(By.xpath("//*[@id=\'checkoutApp\']/div[2]/div[1]/div[1]/main/div[2]/div[3]/div/section/div[2]/div[2]/button")).click();
+		
+		Thread.sleep(5000);
+		driver.close();
 
 }
 	
