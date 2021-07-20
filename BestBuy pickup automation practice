@@ -24,8 +24,10 @@ public class BestBuy {
 		System.out.println("Enter your last name");
 		String lastName = input.next();
 		
+		input.nextLine();
+		
 		System.out.println("Enter your address");
-		String address = input.next();
+		String address = input.nextLine();
 		
 		System.out.println("Enter your city");
 		String city = input.next();
