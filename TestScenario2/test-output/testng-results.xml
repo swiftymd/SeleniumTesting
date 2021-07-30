@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-07-30T15:51:52 EDT" name="Default suite" finished-at="2021-07-30T15:52:53 EDT" duration-ms="61306">
+    <groups>
+    </groups>
+    <test started-at="2021-07-30T15:51:52 EDT" name="Default test" finished-at="2021-07-30T15:52:53 EDT" duration-ms="61306">
+      <class name="scenario2.SearchTest">
+        <test-method is-config="true" signature="openingBrowser()[pri:0, instance:scenario2.SearchTest@54c562f7]" started-at="2021-07-30T15:51:52 EDT" name="openingBrowser" finished-at="2021-07-30T15:51:57 EDT" duration-ms="5662" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openingBrowser -->
+        <test-method signature="chiffonDress()[pri:1, instance:scenario2.SearchTest@54c562f7]" started-at="2021-07-30T15:51:57 EDT" name="chiffonDress" finished-at="2021-07-30T15:52:07 EDT" duration-ms="9092" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chiffonDress -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:scenario2.SearchTest@54c562f7]" started-at="2021-07-30T15:52:07 EDT" name="tearDown" finished-at="2021-07-30T15:52:12 EDT" duration-ms="5098" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="openingBrowser()[pri:0, instance:scenario2.SearchTest@54c562f7]" started-at="2021-07-30T15:52:12 EDT" name="openingBrowser" finished-at="2021-07-30T15:52:18 EDT" duration-ms="6013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openingBrowser -->
+        <test-method signature="summerDress()[pri:2, instance:scenario2.SearchTest@54c562f7]" started-at="2021-07-30T15:52:18 EDT" name="summerDress" finished-at="2021-07-30T15:52:31 EDT" duration-ms="12894" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- summerDress -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:scenario2.SearchTest@54c562f7]" started-at="2021-07-30T15:52:31 EDT" name="tearDown" finished-at="2021-07-30T15:52:36 EDT" duration-ms="5103" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="openingBrowser()[pri:0, instance:scenario2.SearchTest@54c562f7]" started-at="2021-07-30T15:52:36 EDT" name="openingBrowser" finished-at="2021-07-30T15:52:42 EDT" duration-ms="5989" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openingBrowser -->
+        <test-method signature="noResults()[pri:3, instance:scenario2.SearchTest@54c562f7]" started-at="2021-07-30T15:52:42 EDT" name="noResults" finished-at="2021-07-30T15:52:48 EDT" duration-ms="6350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- noResults -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:scenario2.SearchTest@54c562f7]" started-at="2021-07-30T15:52:48 EDT" name="tearDown" finished-at="2021-07-30T15:52:53 EDT" duration-ms="5082" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- scenario2.SearchTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
