@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-08-04T18:49:37 EDT" name="Default suite" finished-at="2021-08-04T18:49:51 EDT" duration-ms="13936">
+    <groups>
+    </groups>
+    <test started-at="2021-08-04T18:49:37 EDT" name="Default test" finished-at="2021-08-04T18:49:51 EDT" duration-ms="13936">
+      <class name="testscenario4.VerifyOrder">
+        <test-method is-config="true" signature="openingBrowser()[pri:0, instance:testscenario4.VerifyOrder@52500920]" started-at="2021-08-04T18:49:37 EDT" name="openingBrowser" finished-at="2021-08-04T18:49:41 EDT" duration-ms="3853" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openingBrowser -->
+        <test-method signature="verifyOrder()[pri:0, instance:testscenario4.VerifyOrder@52500920]" started-at="2021-08-04T18:49:41 EDT" name="verifyOrder" finished-at="2021-08-04T18:49:46 EDT" duration-ms="4932" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyOrder -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testscenario4.VerifyOrder@52500920]" started-at="2021-08-04T18:49:46 EDT" name="tearDown" finished-at="2021-08-04T18:49:51 EDT" duration-ms="5107" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testscenario4.VerifyOrder -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
