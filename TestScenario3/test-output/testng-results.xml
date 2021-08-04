@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-08-04T15:33:00 EDT" name="Default suite" finished-at="2021-08-04T15:33:18 EDT" duration-ms="18201">
+    <groups>
+    </groups>
+    <test started-at="2021-08-04T15:33:00 EDT" name="Default test" finished-at="2021-08-04T15:33:18 EDT" duration-ms="18201">
+      <class name="scenario3.Cart">
+        <test-method is-config="true" signature="openingBrowser()[pri:0, instance:scenario3.Cart@52500920]" started-at="2021-08-04T15:33:00 EDT" name="openingBrowser" finished-at="2021-08-04T15:33:04 EDT" duration-ms="3348" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openingBrowser -->
+        <test-method signature="cartVerification()[pri:0, instance:scenario3.Cart@52500920]" started-at="2021-08-04T15:33:04 EDT" name="cartVerification" finished-at="2021-08-04T15:33:13 EDT" duration-ms="9690" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cartVerification -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:scenario3.Cart@52500920]" started-at="2021-08-04T15:33:13 EDT" name="tearDown" finished-at="2021-08-04T15:33:18 EDT" duration-ms="5122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- scenario3.Cart -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
